@@ -59,6 +59,11 @@
 </body>
 <script src="jquery-3.6.0.min.js"></script>
 <script>
+
+    $('.btn').hide();
+    $('.list').hide();
+
+
     $(window).resize(
 
         function () {
@@ -66,36 +71,18 @@
                 $('.mynav ul').hide();
                 $('.logos').hide();
                 $('.btn').show();
-                $('.list').hide();
+            }
+            else{
+                $('.mynav ul').show();
+                $('.logos').show();
+                $('.btn').hide();
             }
         },
 
     )
 
-    $(window).resize(
+    
 
-        function () {
-            if ($(window).width() >= 730) {
-                $('.mynav ul').show();
-                $('.logos').show();
-                $('.btn').hide();
-                $('.list').hide();
-            }
-        }
-
-    )
-
-
-    $(window).resize(
-
-        function () {
-            if ($(window).width() >= 730) {
-                $('ul').show();
-                $('.logos').show();
-            }
-        }
-
-    )
 
     var tmpAnimation = 0;
 
