@@ -62,7 +62,19 @@
 
     $('.btn').hide();
     $('.list').hide();
+    
 
+    if ($(window).width() < 730) {
+                $('.mynav ul').hide();
+                $('.logos').hide();
+                $('.btn').show();
+            }
+            else{
+                $('.mynav ul').show();
+                $('.logos').show();
+                $('.btn').hide();
+            }
+    
 
     $(window).resize(
 
