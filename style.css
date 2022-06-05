@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Inconsolata&family=Oleo+Script+Swash+Caps&family=Roboto+Slab:wght@700&family=Source+Code+Pro:wght@300&family=Tapestry&family=Ubuntu:wght@400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.mynav ul{
+     list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+}
+
+.mynav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 0 25px 0;
+    flex-direction: row;
+    height: 60px;
+    width: 100vw;
+}
+
+.logos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 216px;
+}
+
+img{
+    margin-right: 20px;
+}
+
+img:hover{
+    width: 30px;
+}
+
+ul li a{
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 18px;
+    font-family: 'Inconsolata', monospace;
+    color: black;
+}
+
+.mynav ul li a:hover{
+    font-size: 24px;
+    /* color: rgb(41, 69, 255); */
+    font-weight: bold;
+    text-shadow: 2px 2px 5px grey;
+}
+
+.title{
+    margin-left: 20px;
+    font-size: 24px;
+    font-family: 'Ubuntu', sans-serif;
+    cursor: pointer;
+}
+
+.title span{
+    color: rgb(92, 195, 236);
+    font-weight: bold;
+}
+
+
+.btn{
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-color: transparent;
+    cursor: pointer;
+    /* width: 0;
+    height: 0;
+    visibility: hidden; */
+}
+
+.list a{
+    font-size: 26px;
+    font-family: 'Inconsolata', monospace;
+}
+
+.list{
+    background-color: skyblue;
+}
+
+.list li{
+    border-bottom: 2px solid black;
+    height: 45px;
+    display: flex;
+    align-items: center;
+}

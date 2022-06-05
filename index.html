@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nav bar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header id="container" class="container">
+        <nav class="mynav">
+            <div class="title">
+                Coding <span>Addict</span>
+            </div>
+            <ul>
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#">Projects</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+            <div class="logos">
+                <a href="#"><img width="21px" src="images/fb.png" alt="facebook"></a>
+                <a href="#"><img width="21px" src="images/twitter.png" alt="twitter"></a>
+                <a href="#"><img width="21px" src="images/insta.png" alt="instagram"></a>
+                <a href="#"><img width="21px" src="images/linkedin.png" alt="linkedin"></a>
+                <a href="#"><img width="21px" src="images/diamond.png" alt="connect"></a>
+            </div>
+            <button class="btn"><img width="30px" src="images/bar.png" alt=""></button>
+
+        </nav>
+        <div class="list">
+            <ul>
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#">Projects</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+</body>
+<script src="jquery-3.6.0.min.js"></script>
+<script>
+    $(window).resize(
+
+        function () {
+            if ($(window).width() < 730) {
+                $('.mynav ul').hide();
+                $('.logos').hide();
+                $('.btn').show();
+                $('.list').hide();
+            }
+        },
+
+    )
+
+    $(window).resize(
+
+        function () {
+            if ($(window).width() >= 730) {
+                $('.mynav ul').show();
+                $('.logos').show();
+                $('.btn').hide();
+                $('.list').hide();
+            }
+        }
+
+    )
+
+
+    $(window).resize(
+
+        function () {
+            if ($(window).width() >= 730) {
+                $('ul').show();
+                $('.logos').show();
+            }
+        }
+
+    )
+
+    var tmpAnimation = 0;
+
+    $('.btn').click(
+        function () {
+            $('.list').slideToggle(200);
+            tmpAnimation = tmpAnimation + 90;
+            $({ degrees: tmpAnimation - 90 }).animate({ degrees: tmpAnimation }, {
+
+                duration: 200,
+
+                step: function (now) {
+
+                    $('.btn').css({
+
+                        transform: 'rotate(' + now + 'deg)'
+
+                    });
+
+                }
+
+            });
+        },
+    )
+
+
+</script>
+
+</html>
